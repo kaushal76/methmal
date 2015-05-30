@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form role="form">
+  <fieldset name = "Reviewer allocations">
+      <field name="rev1ewer" type="sql"
+                
+            label="Reviewer"
+            description="Please select the reviewers for the paper"        
+            required="true" 
+			class="input-block-level"
+            query="SELECT CONCAT(title,' ',firstname,' ',surname) AS name, id, agreed FROM #__confmgt_rev1ewers WHERE agreed = 1" 
+			key_field = "id"
+			value_field = "name"
+			
+	>
+      <option value="">Please select the reviewer</option>
+    </field>
+    <field name="checked_out" type="hidden" filter="unset" />
+    <field name="checked_out_time" type="hidden" filter="unset" />
+  </fieldset>
+</form>

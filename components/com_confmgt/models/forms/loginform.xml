@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form role="form">
+  <fieldset name = "Login page">
+
+	   <field name="pw" type="password"
+                
+            label="COM_CONFMGT_FORM_LBL_REG_PASS"
+			labelclass = "control-label"
+            description="COM_CONFMGT_FORM_DESC_REG_PASS"        
+            required="true" 
+			class="form-control input-block-level"
+			message = "Please enter your password"
+			 
+		/>
+		 
+   
+   <field name="username" type="text"
+                
+            label="COM_CONFMGT_FORM_LBL_REG_USERNAME"
+			labelclass = "control-label"
+            description="COM_CONFMGT_FORM_DESC_REG_USERNAME"        
+            required="true" 
+			class="form-control input-block-level"
+			message = "Please enter your username"
+			 
+		/>
+		
+  </fieldset>
+</form>

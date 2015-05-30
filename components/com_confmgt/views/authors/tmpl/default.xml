@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_CONFMGT_TITLE_LIST_VIEW_AUTHORS" option="View">
+        <message>
+                        <![CDATA[COM_CONFMGT_TITLE_LIST_VIEW_AUTHORS_DESC]]>
+        </message>
+	</layout>
+</metadata>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form role="form">
+	<fieldset name = "Author details">      
+		<field name="id" type="hidden" default="0"/> 
+			
+		<field name="title" type="list" label="COM_CONFMGT_FORM_LBL_AUTHOR_TITLE" description="COM_CONFMGT_FORM_DESC_AUTHOR_TITLE" class="input-block-level">
+		<option value="Prof">Professor</option>
+  		<option value="Dr">Dr</option>
+		<option value="Mr">Mr</option>
+		<option value="Ms">Ms</option>
+		<option value="Miss">Miss</option>
+		<option value="Mrs">Mrs</option>
+		</field>
+		
+		<field name="firstname" type="text"
+                
+            label="COM_CONFMGT_FORM_LBL_AUTHOR_FIRSTNAME"
+            description="COM_CONFMGT_FORM_DESC_AUTHOR_FIRSTNAME"        
+            required="true" 
+			class="input-block-level"
+            filter="string" 
+			
+		/>  
+		
+		<field name="surname" type="text"
+                
+            label="COM_CONFMGT_FORM_LBL_AUTHOR_SURNAME"
+            description="COM_CONFMGT_FORM_DESC_AUTHOR_SURNAME"        
+            required="true" 
+			class="input-block-level"
+            filter="string" 
+			
+		/>  
+		
+		<field name="email" type="email"
+                
+            label="COM_CONFMGT_FORM_LBL_AUTHOR_EMAIL"
+            description="COM_CONFMGT_FORM_DESC_AUTHOR_EMAIL"        
+            required="true" 
+			class="input-block-level"
+            filter="email" 
+			
+		/> 
+		
+		<field name="institution" type="text"
+                
+            label="COM_CONFMGT_FORM_LBL_AUTHOR_INSTITUTION"
+            description="COM_CONFMGT_FORM_DESC_AUTHOR_INSTITUTION"        
+            required="true" 
+			class="input-block-level"
+            filter="string" 
+			
+		/> 
+		
+		<field name="country" type="text" 
+                
+            label="COM_CONFMGT_FORM_LBL_AUTHOR_COUNTRY"
+            description="COM_CONFMGT_FORM_DESC_AUTHOR_COUNTRY"        
+            required="true" 
+			class="input-block-level"
+            filter="string" 
+			
+		/> 
+		
+        <field name="checked_out" type="hidden" filter="unset" />
+        <field name="checked_out_time" type="hidden" filter="unset" />
+	</fieldset>
+</form>

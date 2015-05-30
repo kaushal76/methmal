@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form role="form">
+	<fieldset name = "Camera ready paper submission">
+	
+			<field name="type" type="text"
+                
+            label="Tile of the final camera ready paper"
+            description="Please enter the title of the final camera ready paper"        
+            required="true" 
+			class="input-block-level"
+            filter="string" 
+			
+			/> 
+	
+			<field name="camera_ready" type="file" 
+			label="COM_CONFMGT_FORM_LBL_CAMERA_PAPER" 
+			description="COM_CONFMGT_FORM_CAMERAL_PAPER" size="10" 
+			class="input-block-level"	
+			/>
+	</fieldset> 
+
+</form>

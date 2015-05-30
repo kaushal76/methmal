@@ -1,0 +1,54 @@
+How to activate slideshow on Homepage
+
+
+
+Go to Admin > Extensions > Module Manager > click to New > Custom HTML > add Custom output 
+
+
+
+Custom output:
+
+
+
+<a href="content/article.html" title=""><img src="templates/skylab/images/slide1.jpg" border="0" alt="" title="" /></a>
+
+<a href="content/article.html" title=""><img src="templates/skylab/images/slide2.jpg" border="0" alt="" title="" /></a>
+
+<a href="content/article.html" title=""><img src="templates/skylab/images/slide3.jpg" border="0" alt="" title="" /></a>
+
+<a href="content/article.html" title=""><img src="templates/skylab/images/slide4.jpg" border="0" alt="" title="" /></a>
+
+<a href="content/article.html" title=""><img src="templates/skylab/images/slide5.jpg" border="0" alt="" title="" /></a>
+
+
+
+Set module parameters
+
+
+
+Show Title: Hide
+
+Position: position-12
+
+Status: Published
+
+Module Assigment: On All Pages or select specific pages
+
+
+
+Save!
+
+
+
+Upload your slide images in images folder of your Skylab Template. (960x300px)
+
+
+
+
+
+Go to Admin > Extensions > Template Manager > Skylab and set Display Slideshow to Yes
+
+
+
+Done!
+

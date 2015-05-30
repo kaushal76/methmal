@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form role="form">
+	<fieldset name = "Review outcome update">      
+		<field name="id" type="hidden" default="0"/> 
+			
+		<field name="abstract_review_outcome" type="list" label="COM_CONFMGT_FORM_LBL_ABSTRACT_REVIEW_OUTCOME" description="COM_CONFMGT_FORM_DESC_ABSTRACT_REVIEW_OUTCOME" class="input-block-level" >
+		
+		<option value="1">Accept as it is</option>
+  		<option value="2">Accept subjected to minor changes</option>
+		<option value="3">Resubmission required</option>
+		<option value="4">Rejected</option>
+		
+		</field>
+
+
+       	<field name="abstract_review_comments" type="absrev1ewcmt"
+                
+            label="COM_CONFMGT_FORM_LBL_ABSTRACT_REVIEW_COMMENTS"
+            description="COM_CONFMGT_FORM_DESC_ABSTRACT_REVIEW_COMMENTS" 
+			required="true" 
+			msgsource = "abs_outcome"
+			class="input-block-level"
+            cols="100"
+            rows="8"
+            filter="safehtml" 
+			
+			/> 
+
+       <field name="created_by" type="createdby" default="" 
+            label="COM_CONFMGT_FORM_LBL_PAPER_CREATED_BY"
+            description="COM_CONFMGT_FORM_DESC_PAPER_CREATED_BY"
+			class="input-block-level"  /> 
+
+        <field name="checked_out" type="hidden" filter="unset" />
+        <field name="checked_out_time" type="hidden" filter="unset" />
+	</fieldset>
+</form>

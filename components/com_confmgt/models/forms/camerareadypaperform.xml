@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form role="form">
+	<fieldset name = "Camera ready paper submission">
+				
+			<field name="type" type="textarea"
+                
+            label="Final abstract for the publication"
+            description="Please enter the final abstract as it should appear in the final publication" 
+			required="true" 
+			class="input-block-level"
+            menu_published="0"
+            cols="100"
+            rows="8"
+            filter="safehtml" 		
+			/> 
+
+	
+			<field name="camera_ready" type="file" 
+			label="COM_CONFMGT_FORM_LBL_CAMERA_PAPER" 
+			description="COM_CONFMGT_FORM_CAMERAL_PAPER" size="10" 
+			class="input-block-level"	
+			/>
+	</fieldset> 
+
+</form>

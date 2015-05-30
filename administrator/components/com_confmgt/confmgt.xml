@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="2.5" method="upgrade">
+    <name>com_confmgt</name>
+    <creationDate>2015-05-12</creationDate>
+    <copyright>Copyright (C) 2014. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <author>Dr Kaushal Keraminiyage</author>
+    <authorEmail>admin@confmgt.com</authorEmail>
+    <authorUrl>http://www.confmgt.com</authorUrl>
+    <version>2.5.7</version>
+    <description>This component helps you to organise academic conferences </description>
+    
+    <install> <!-- Runs on install -->
+
+    </install>
+    <uninstall> <!-- Runs on uninstall -->
+ 
+    </uninstall>
+
+    <files folder="site">
+        <filename>index.html</filename>
+        <filename>confmgt.php</filename>
+        <filename>controller.php</filename>
+        <filename>router.php</filename>
+        <folder>assets</folder>
+		<folder>views</folder>
+        <folder>models</folder>
+        <folder>controllers</folder>
+        <folder>helpers</folder>
+    </files>
+    <languages folder="site">
+        
+			<language tag="en-GB">language/en-GB.com_confmgt.ini</language>
+    </languages>
+    <administration>
+        <menu img="components/com_confmgt/assets/images/s_com_confmgt.png" >COM_CONFMGT</menu>
+        <submenu>
+            
+			<menu link="option=com_confmgt&amp;view=papers" view="papers" img="components/com_confmgt/assets/images/s_papers.png" alt="Confmgt/Papers">COM_CONFMGT_TITLE_PAPERS</menu>
+
+			<menu link="option=com_confmgt&amp;view=authors" view="authors" img="components/com_confmgt/assets/images/s_authors.png" alt="Confmgt/Authors">COM_CONFMGT_TITLE_AUTHORS</menu>
+
+			<menu link="option=com_confmgt&amp;view=rev1ewers" view="rev1ewers" img="components/com_confmgt/assets/images/s_rev1ewers.png" alt="Confmgt/Rev1ewers">COM_CONFMGT_TITLE_REV1EWERS</menu>
+
+			<menu link="option=com_confmgt&amp;view=rev1ews" view="rev1ews" img="components/com_confmgt/assets/images/s_rev1ews.png" alt="Confmgt/Rev1ews">COM_CONFMGT_TITLE_REV1EWS</menu>
+
+			<menu link="option=com_confmgt&amp;view=themes" view="themes" img="components/com_confmgt/assets/images/s_themes.png" alt="Confmgt/Themes">COM_CONFMGT_TITLE_THEMES</menu>
+
+			<menu link="option=com_confmgt&amp;view=themeleaders" view="themeleaders" img="components/com_confmgt/assets/images/s_themeleaders.png" alt="Confmgt/Themeleaders">COM_CONFMGT_TITLE_THEMELEADERS</menu>
+
+			<menu link="option=com_confmgt&amp;view=payments" view="payments" img="components/com_confmgt/assets/images/s_payments.png" alt="Confmgt/Payments">COM_CONFMGT_TITLE_PAYMENTS</menu>
+
+			<menu link="option=com_confmgt&amp;view=registrations" view="registrations" img="components/com_confmgt/assets/images/s_registrations.png" alt="Confmgt/Registrations">COM_CONFMGT_TITLE_REGISTRATIONS</menu>
+
+			<menu link="option=com_confmgt&amp;view=fullpapers" view="fullpapers" img="components/com_confmgt/assets/images/s_fullpapers.png" alt="Confmgt/Fullpapers">COM_CONFMGT_TITLE_FULLPAPERS</menu>
+
+			<menu link="option=com_confmgt&amp;view=camerareadypapers" view="camerareadypapers" img="components/com_confmgt/assets/images/s_camerareadypapers.png" alt="Confmgt/Camerareadypapers">COM_CONFMGT_TITLE_CAMERAREADYPAPERS</menu>
+
+			<menu link="option=com_confmgt&amp;view=presentations" view="presentations" img="components/com_confmgt/assets/images/s_presentations.png" alt="Confmgt/Presentations">COM_CONFMGT_TITLE_PRESENTATIONS</menu>
+
+        </submenu>
+        <files folder="administrator">
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <filename>controller.php</filename>
+            <filename>index.html</filename>
+            <filename>confmgt.php</filename>
+            <folder>controllers</folder>
+            <folder>assets</folder>
+            <folder>helpers</folder>
+            <folder>models</folder>
+            <folder>sql</folder>
+            <folder>tables</folder>
+            <folder>views</folder>
+        </files>
+        <languages folder="administrator">
+			<language tag="en-GB">language/en-GB.com_confmgt.ini</language>
+			<language tag="en-GB">language/en-GB.com_confmgt.sys.ini</language>
+        </languages>
+    </administration>
+	<updateservers>
+		<server type="extension" priority="1" name="Confmgt">http://www.confmgt.com/update/confmgt-update.xml</server>
+	</updateservers>
+</extension>
+

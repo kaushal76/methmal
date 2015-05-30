@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form role="form">
+	<fieldset name = "Review details">      
+		<field name="id" type="hidden" default="0"/> 
+			
+		<field name="recommendation" type="list" label="COM_CONFMGT_FORM_LBL_REVIEW_RECOMMENDATION" description="COM_CONFMGT_FORM_DESC_REVIEW_RECOMMENDATION" class="form-control input-block-level">
+		<option value="1">Accept as it is</option>
+  		<option value="2">Accept subjected to minor changes</option>
+		<option value="3">Resubmission required</option>
+		<option value="4">Rejected</option>
+		</field>
+		
+	<field name="author_comments" type="textarea"
+                
+            label="COM_CONFMGT_FORM_LBL_REVIEW_AUTHOR_COMMENTS"
+            description="COM_CONFMGT_FORM_DESC_REVIEW_AUTHOR_COMMENTS" 
+			required="true" 
+			class="form-control input-block-level"
+            cols="100"
+            rows="8"
+            filter="safehtml" 
+			
+			/>
+		
+	<field name="leader_comments" type="textarea"
+                
+            label="COM_CONFMGT_FORM_LBL_REVIEW_LEADR_COMMENTS"
+            description="COM_CONFMGT_FORM_DESC_REVIEW_LEADER_COMMENTS" 
+			required="true" 
+			class="form-control input-block-level"
+            cols="100"
+            rows="8"
+            filter="safehtml" 
+			
+			/>
+		
+		<field name="score" type="integer"
+                
+            label="COM_CONFMGT_FORM_LBL_REVIEW_SCORE"
+            description="COM_CONFMGT_FORM_DESC_REVIEW_SCORE"        
+            required="true" 
+			class="form-control input-block-level"
+            first ="1"
+			last = "10"
+			step= "1"
+			default = "0"
+			
+		/> 
+		
+        <field name="checked_out" type="hidden" filter="unset" />
+		<field name="linkid" type="hidden" />
+		<field name="mode" type="hidden" />
+        <field name="checked_out_time" type="hidden" filter="unset" />
+	</fieldset>
+</form>

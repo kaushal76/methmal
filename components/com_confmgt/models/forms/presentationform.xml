@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form role="form">
+	<fieldset name = "Presentation submission">
+				
+			<field name="type" type="textarea"
+                
+            label="A short Bio of the presenter"
+            description="Please enter a short bio of the presenter here." 
+			required="true" 
+			class="input-block-level"
+            menu_published="0"
+            cols="100"
+            rows="8"
+            filter="safehtml" 		
+			/> 
+
+	
+			<field name="presentation" type="file" 
+			label="Presentation" 
+			description="Please select the presentation" size="10" 
+			class="input-block-level"	
+			/>
+	</fieldset> 
+
+</form>

@@ -1,0 +1,95 @@
+
+/* Alterations*/
+
+.btn-file {
+  position: relative;
+  overflow: hidden;
+}
+.btn-file input[type=file] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  font-size: 999px;
+  text-align: right;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  background: red;
+  cursor: inherit;
+  display: block;
+}
+input[readonly] {
+  background-color: white !important;
+  cursor: text !important;
+}
+
+.btn-entry {
+
+	height:100px;
+	width:auto;
+}
+
+.form-entry {
+	display:inline;
+}
+
+.lg-span {
+	padding: 10px 16px;
+  font-size: 30px;
+  line-height: 1.33;
+  border-radius: 6px;
+}
+
+.btn-custom {
+  background-color: hsl(0, 0%, 79%) !important;
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#134134134", endColorstr="#c9c9c9");
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#134134134), to(#c9c9c9));
+  background-image: -moz-linear-gradient(top, #134134134, #c9c9c9);
+  background-image: -ms-linear-gradient(top, #134134134, #c9c9c9);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #134134134), color-stop(100%, #c9c9c9)); 
+  background-image: -webkit-linear-gradient(top, #134134134, #c9c9c9);
+  background-image: -o-linear-gradient(top, #134134134, #c9c9c9);
+  background-image: linear-gradient(#134134134, #c9c9c9);
+  border-color: #c9c9c9 #c9c9c9 hsl(0, 0%, 68.5%);
+  color: #333 !important;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.69);
+  -webkit-font-smoothing: antialiased;
+}
+
+.modal-body {
+	position: relative;
+	max-height:450px;
+	padding: 10px;
+	overflow-y: auto
+}
+
+
+div.modal {
+	position: fixed;
+	top: 5%;
+	left: 50%;
+	z-index: 1050;
+	width: 750px;
+	height:auto;
+	margin-left: -295px;
+	background-color: #fff;
+	border: 1px solid #999;
+	border: 1px solid rgba(0,0,0,0.3);
+*border:1px solid #999;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	outline: 0;
+	-webkit-box-shadow: 0 3px 7px rgba(0,0,0,0.3);
+	-moz-box-shadow: 0 3px 7px rgba(0,0,0,0.3);
+	box-shadow: 0 3px 7px rgba(0,0,0,0.3);
+	-webkit-background-clip: padding-box;
+	-moz-background-clip: padding-box;
+	background-clip: padding-box
+}
+
+
+/*end Custom */
+

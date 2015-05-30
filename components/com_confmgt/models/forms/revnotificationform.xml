@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form role="form">
+	<fieldset name = "Reviewer notification">      
+		<field name="id" type="hidden" default="0"/> 	
+		<field name="email" type="hidden" default="0"/> 
+		<field name="subject" type="revsubject"               
+            label="Subject"
+            description="COM_CONFMGT_FORM_DESC_REV_NOTIFICAION" 
+			required="true" 
+			msgsource = "rev_notification"
+			class="input-block-level"
+            filter="safehtml" 
+		/> 		
+      	<field name="body" type="revnotify"
+                
+            label="Message"
+            description="COM_CONFMGT_FORM_DESC_REV_NOTIFICAION" 
+			required="true" 
+			msgsource = "rev_notification"
+			class="input-block-level"
+            cols="100"
+            rows="8"
+            filter="safehtml" 
+		/> 
+        <field name="checked_out" type="hidden" filter="unset" />
+        <field name="checked_out_time" type="hidden" filter="unset" />
+	</fieldset>
+</form>

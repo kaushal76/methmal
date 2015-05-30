@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form role="form">
+  <fieldset name = "New Author Register">
+    <field name="id" type="hidden" default="0"/>
+    <field name="title" type="list" label="COM_CONFMGT_FORM_LBL_REG_TITLE" description="COM_CONFMGT_FORM_DESC_REG_TITLE" class="form-control input-block-level">
+      <option value="Prof">Professor</option>
+	  <option value="Associate Prof">Associate Professor</option>
+	  <option value="Assistant Prof">Assistant Professor</option>
+      <option value="Dr">Dr</option>
+      <option value="Mr">Mr</option>
+      <option value="Ms">Ms</option>
+      <option value="Miss">Miss</option>
+      <option value="Mrs">Mrs</option>
+    </field>
+    <field name="firstname" type="text"
+                
+            label="COM_CONFMGT_FORM_LBL_REG_FIRSTNAME"
+            description="COM_CONFMGT_FORM_DESC_REG_FIRSTNAME"        
+            required="true" 
+			class="form-control input-block-level"
+            filter="string" 
+			hint="First Name" 
+			message="Please enter your First name"
+			
+		/>
+    <field name="surname" type="text"
+                 
+            label="COM_CONFMGT_FORM_LBL_REG_SURNAME"
+            description="COM_CONFMGT_FORM_DESC_REG_SURNAME"        
+            required="true" 
+			class="form-control input-block-level"
+            filter="string" 
+			hint="Surname"
+			message="Please enter your Surname"
+		
+			
+		/>
+    <field name="email" type="email"
+                
+            label="COM_CONFMGT_FORM_LBL_REG_EMAIL"
+            description="COM_CONFMGT_FORM_DESC_REG_EMAIL"        
+            required="true" 
+			class="form-control validate-email input-block-level" 
+            validate="email" 
+			message="Please enter a valid email address"
+			
+		/>
+    <field name="password" type="password"
+                
+            label="COM_CONFMGT_FORM_LBL_REG_PASS"
+            description="COM_CONFMGT_FORM_DESC_REG_PASS"        
+            required="true" 
+			class="form-control input-block-level"
+			message="Please enter a password"
+			
+		/>
+    <field name="password2" type="password"
+                
+            label="COM_CONFMGT_FORM_LBL_REG_PASS2"
+            description="COM_CONFMGT_FORM_DESC_REG_PASS2"        
+            required="true" 
+			class="form-control input-block-level"
+            validate = "equals" field="password"
+			message="Please confirm password and it should match the password entered in the field above" 
+			
+		/>
+
+ 
+   <field name="username" type="text"
+                
+            label="COM_CONFMGT_FORM_LBL_REG_USERNAME"
+            description="COM_CONFMGT_FORM_DESC_REG_USERNAME"        
+            required="true" 
+			class="form-control input-block-level"
+			message="Please enter a Username for your your account" 
+			 
+		/>
+		
+  </fieldset>
+</form>
