@@ -2,3 +2,8 @@
 # DW Dreamweaver added files
 _notes
 dwsync.xml
+#Eclipse added files and folder
+.settings
+.buildpath
+.gitignore
+.project
