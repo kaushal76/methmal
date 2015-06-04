@@ -1,6 +1,6 @@
 <?php
 /**
- * @version     2.5.7
+ * @version     2.5.8.1
  * @package     com_confmgt
  * @copyright   Copyright (C) 2015. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
@@ -11,30 +11,35 @@ defined('_JEXEC') or die;
 JHtml::_('bootstrap.loadCss', 'true', 'ltr');
 JHtml::_('bootstrap.framework');
 JHtml::_('jquery.framework');
-JHtml::_('bootstrap.modal');
-JHtml::_('bootstrap.alert', 'error');
+
+$url = "components/com_confmgt/assets/js/bootbox.min.js";
+$document = JFactory::getDocument ();
+$document->addScript( $url );
+
 ?>
 <script type="text/javascript">
-    function deleteItem(item_id){
-        if(confirm("<?php echo JText::_('COM_CONFMGT_DELETE_MESSAGE'); ?>")){
-            document.getElementById('form-author-delete-' + item_id).submit();
-        }
-    }
+function deleteItem(item_id){
+	bootbox.confirm("Do you really want to delete this author? Once deleted it is irrecoverable", "Cancel", "Delete", function(result) {
+	    if (result) {
+	    	document.getElementById('form-author-delete-' + item_id).submit();
+	    } 
+	});
+}
 </script>
 
 <div class="panel panel-default">
   <div class="panel-heading">
-    <h1><?php echo JText::_('COM_CONFMGT_AUTHORS_FORM_PANEL_HEADING'); ?></h1>
+    <h1><?php echo JText::_('COM_CONFMGT_VIEW_AUTHORS_DEFAULT_FORM_PANEL_HEADING'); ?></h1>
   </div>
   <div class="panel-body">
-    <p><?php echo JText::_('COM_CONFMGT_AUTHORS_FORM_PANEL_DETAILS'); ?></p>
+    <p><?php echo JText::_('COM_CONFMGT_VIEW_AUTHORS_DEFAULT_FORM_PANEL_DETAILS'); ?></p>
   </div>
   <table class="admintable table">
     <thead>
       <tr>
-        <th width="5%"><?php echo JText::_("COM_CONFMGT_AUTHOR_NUMBER"); ?></th>
-        <th><?php echo JText::_("COM_CONFMGT_NAME"); ?></th>
-        <th width="20%"><?php echo JText::_("COM_CONFMGT_ACTION"); ?></th>
+        <th width="5%"><?php echo JText::_("COM_CONFMGT_VIEW_AUTHORS_DEFAULT_NUMBER"); ?></th>
+        <th><?php echo JText::_("COM_CONFMGT_VIEW_AUTHORS_DEFAULT_NAME"); ?></th>
+        <th width="20%"><?php echo JText::_("COM_CONFMGT_VIEW_AUTHORS_DEFAULT_ACTION"); ?></th>
       </tr>
     </thead>
     <tbody>
@@ -50,7 +55,9 @@ $linkid = $this->linkid;
         <td>
         <div class="inline"> 
         <form id="form-author-delete-<?php echo $item->id; ?>" style="display:inline" action="<?php echo JRoute::_('index.php'); ?>" method="post" class="form-validate" enctype="multipart/form-data">
-            <button class="btn btn-danger" type="button" onclick="javascript:deleteItem(<?php echo $item->id; ?>);"><i class="icon-trash icon-white"></i></button>
+            <button class="btn btn-danger" type="button" onclick="javascript:deleteItem(<?php echo $item->id; ?>);">
+            <i class="icon-trash icon-white"></i>
+            </button>
             <input type="hidden" name="id" value="<?php echo $item->id; ?>" />
             <input type="hidden" name="option" value="com_confmgt" />
             <input type="hidden" name="task" value="author.remove" />
@@ -59,7 +66,8 @@ $linkid = $this->linkid;
         </div>
         <div class="inline">
           <form id="form-author-edit-<?php echo $item->id; ?>" style="display:inline" action="<?php echo JRoute::_('index.php'); ?>" method="post" class="form-validate" enctype="multipart/form-data">
-            <button class="btn btn" type="submit"><i class="icon-edit"></i></button>
+            <button class="btn btn" type="submit"><i class="icon-edit"></i>
+            </button>
             <input type="hidden" name="id" value="<?php echo $item->id; ?>" />
             <input type="hidden" name="option" value="com_confmgt" />
             <input type="hidden" name="task" value="author.edit" />
@@ -73,26 +81,18 @@ $linkid = $this->linkid;
         if (!$show){ ?>
       <tr>
         <td colspan="3"><?php 
-            echo JText::_('COM_CONFMGT_NO_ITEMS');
+            echo JText::_('COM_CONFMGT_VIEW_AUTHORS_DEFAULT_NO_ITEMS');
 		?></td>
       </tr>
       <?php
-			$newBtn = JText::_("COM_CONFMGT_ADD_AUTHOR");
+			$newBtn = JText::_("COM_CONFMGT_VIEW_AUTHORS_DEFAULT_ADD_AUTHOR");
 			$nxtBtnDisable = " disabled = disabled";
 		}else{
-			$newBtn = JText::_("COM_CONFMGT_ADD_ANOTHER_AUTHOR");
+			$newBtn = JText::_("COM_CONFMGT_VIEW_AUTHORS_DEFAULT_ADD_ANOTHER_AUTHOR");
 			$nxtBtnDisable = "";
         }
         ?>
-    </tbody>
-    <tfoot>
-      <?php if ($show): ?>
-    <div class="pagination">
-      <p class="counter"> <?php echo $this->pagination->getPagesCounter(); ?> </p>
-      <?php echo $this->pagination->getPagesLinks(); ?> </div>
-    <?php endif; ?>
-      </tfoot>
-    
+    </tbody>    
   </table>
 </div>
 <div class="inline">
@@ -102,7 +102,10 @@ $linkid = $this->linkid;
     <input type="hidden" name="task" value="author.edit" />
     <input type="hidden" name="linkid" value="<?php echo $linkid; ?>" />
     <input type="hidden" name="id" value="0" />
-    <button class="btn btn-default btn-lg" type="submit"><?php echo $newBtn; ?> </button>
+    <button class="btn btn-default btn-lg" type="submit">
+    <i class="icon-plus"></i>
+    <?php echo $newBtn; ?> 
+    </button>
   </form>
 </div>
 <div class="inline">
@@ -110,7 +113,10 @@ $linkid = $this->linkid;
     <?php echo JHtml::_('form.token'); ?>
     <input type="hidden" name="option" value="com_confmgt" />
     <input type="hidden" name="view" value="papers" />
-    <button class="btn btn-default btn-lg" type="submit"><?php echo JText::_("COM_CONFMGT_AUTHORS_BACK"); ?> </button>
+    <button class="btn btn-default btn-lg" type="submit">
+    <i class="icon-arrow-left"></i>
+    <?php echo JText::_("COM_CONFMGT_VIEW_AUTHORS_DEFAULT_AUTHORS_BACK"); ?> 
+    </button>
   </form>
 </div>
 <div class="inline">
@@ -120,6 +126,9 @@ $linkid = $this->linkid;
     <input type="hidden" name="linkid" value="<?php echo $linkid; ?>" />
     <input type="hidden" name="id" value="<?php echo $linkid; ?>" />
     <?php echo JHtml::_('form.token'); ?>
-    <button class="btn btn-default btn-lg" <?php echo $nxtBtnDisable; ?> type="submit"><?php echo JText::_("COM_CONFMGT_PROCEED_TO_PAPER"); ?> </button>
+    <button class="btn btn-default btn-lg" <?php echo $nxtBtnDisable; ?> type="submit">
+    <i class="icon-arrow-right"></i>
+    <?php echo JText::_("COM_CONFMGT_VIEW_AUTHORS_DEFAULT_PROCEED_TO_PAPER"); ?>
+    </button>
   </form>
 </div>
