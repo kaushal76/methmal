@@ -1,6 +1,6 @@
 <?php
 /**
- * @version     2.5.7
+ * @version     2.5.8.1
  * @package     com_confmgt
  * @copyright   Copyright (C) 2015. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
@@ -10,7 +10,7 @@
 
 defined('_JEXEC') or die;
 
-//adding over righting styles
+//adding overriding styles
 $url = "http://cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap-editable/css/bootstrap-editable.css";
 $document = JFactory::getDocument();
 $document->addStyleSheet($url);
