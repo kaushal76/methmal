@@ -29,9 +29,6 @@ class ConfmgtControllerAuthor extends ConfmgtController {
         $previousId = (int) $app->getUserState('com_confmgt.edit.author.id');
         $editId = JFactory::getApplication()->input->getInt('id', null, 'array');
 		
-		//get paper id
-		
-		//$pid = $app->getUserStateFromRequest( 'com_confmgt.new.abstract.id','pid',0 );
 
         // Set the user id for the user to edit in the session.
         $app->setUserState('com_confmgt.edit.author.id', $editId);
@@ -67,8 +64,6 @@ class ConfmgtControllerAuthor extends ConfmgtController {
 		
 		        // Set the user id for the user to edit in the session.
         $app->setUserState('com_confmgt.edit.author.id', $editId);
-		
-		echo $editid;
 
         // Get the model.
         $model = $this->getModel('Author', 'ConfmgtModel');

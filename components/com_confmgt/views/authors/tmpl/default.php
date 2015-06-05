@@ -19,7 +19,7 @@ $document->addScript( $url );
 ?>
 <script type="text/javascript">
 function deleteItem(item_id){
-	bootbox.confirm("Do you really want to delete this author? Once deleted it is irrecoverable", "Cancel", "Delete", function(result) {
+	bootbox.confirm("<?php echo JText::_('COM_CONFMGT_VIEW_AUTHORS_DEFAULT_AUTHOR_DELETE'); ?>", "<?php echo JText::_('COM_CONFMGT_VIEW_AUTHORS_DEFAULT_AUTHOR_DELETE_CANCEL') ?>", "<?php echo JText::_('COM_CONFMGT_VIEW_AUTHORS_DEFAULT_AUTHOR_DELETE_DELETE') ?>", function(result) {
 	    if (result) {
 	    	document.getElementById('form-author-delete-' + item_id).submit();
 	    } 
@@ -58,7 +58,7 @@ $linkid = $this->linkid;
             <button class="btn btn-danger" type="button" onclick="javascript:deleteItem(<?php echo $item->id; ?>);">
             <i class="icon-trash icon-white"></i>
             </button>
-            <input type="hidden" name="id" value="<?php echo $item->id; ?>" />
+            <input type="hidden" name="jform[id]" value="<?php echo $item->id; ?>" />
             <input type="hidden" name="option" value="com_confmgt" />
             <input type="hidden" name="task" value="author.remove" />
             <?php echo JHtml::_('form.token'); ?>
