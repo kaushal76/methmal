@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fieldset name = "Login page">
+
+	   <field name="pw" type="password"
+
+            label="COM_CONFMGR_VIEW_ENTRYPAGE_ENTRY_LOGINMODAL_LBL_PASS"
+			labelclass = "control-label"
+            description="COM_CONFMGR_VIEW_ENTRYPAGE_ENTRY_LOGINMODAL_DESC_PASS"        
+            required="true" 
+			class="input-block-level"
+			message = "COM_CONFMGR_VIEW_ENTRYPAGE_ENTRY_LOGINMODAL_DESC_PASS"
+			 
+		/>
+		 
+   
+   <field name="username" type="text"
+                
+            label="COM_CONFMGR_VIEW_ENTRYPAGE_ENTRY_LOGINMODAL_LBL_USERNAME"
+			labelclass = "control-label"
+            description="COM_CONFMGR_VIEW_ENTRYPAGE_ENTRY_LOGINMODAL_DESC_USERNAME"        
+            required="true" 
+			class="input-block-level"
+			message = "COM_CONFMGR_VIEW_ENTRYPAGE_ENTRY_LOGINMODAL_DESC_USERNAME"
+			 
+		/>
+		
+  </fieldset>
+</form>

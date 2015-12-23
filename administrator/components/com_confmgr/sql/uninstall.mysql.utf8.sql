@@ -1,0 +1,12 @@
+DROP TABLE IF EXISTS #__confmgr_paper;
+DROP TABLE IF EXISTS #__confmgr_abstract;
+DROP TABLE IF EXISTS #__confmgr_full_paper;
+DROP TABLE IF EXISTS #__confmgr_camera_ready_paper;
+DROP TABLE IF EXISTS #__confmgr_presentation;
+DROP TABLE IF EXISTS #__confmgr_theme;
+DROP TABLE IF EXISTS #__confmgr_author;
+DROP TABLE IF EXISTS #__confmgr_rev1ewer;
+DROP TABLE IF EXISTS #__confmgr_rev1ew;
+DROP TABLE IF EXISTS #__confmgr_author_for_paper;
+DROP TABLE IF EXISTS #__confmgr_rev1ewer_for_paper;
+DROP TABLE IF EXISTS #__confmgr_payment;

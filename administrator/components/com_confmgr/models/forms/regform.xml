@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form role="form">
+  <fieldset name = "New Author Register">
+    <field name="id" type="hidden" default="0"/>
+    <field name="title" type="list" label="COM_CONFMGR_VIEW_ENTRYPAGE_ENTRY_REGMODAL_LBL_TITLE" description="COM_CONFMGR_VIEW_ENTRYPAGE_ENTRY_REGMODAL_DESC_TITLE">
+      <option value="Prof">Professor</option>
+	  <option value="Associate Prof">Associate Professor</option>
+	  <option value="Assistant Prof">Assistant Professor</option>
+      <option value="Dr">Dr</option>
+      <option value="Mr">Mr</option>
+      <option value="Ms">Ms</option>
+      <option value="Miss">Miss</option>
+      <option value="Mrs">Mrs</option>
+    </field>
+    <field name="firstname" type="text"
+                
+            label="COM_CONFMGR_VIEW_ENTRYPAGE_ENTRY_REGMODAL_LBL_FIRSTNAME"
+            description="COM_CONFMGR_VIEW_ENTRYPAGE_ENTRY_REGMODAL_DESC_FIRSTNAME"        
+            required="true" 
+            filter="string" 
+			hint="COM_CONFMGR_VIEW_ENTRYPAGE_ENTRY_REGMODAL_LBL_FIRSTNAME" 
+			message="Please enter your First name"
+			
+		/>
+    <field name="surname" type="text"
+                 
+            label="COM_CONFMGR_VIEW_ENTRYPAGE_ENTRY_REGMODAL_LBL_SURNAME"
+            description="COM_CONFMGR_VIEW_ENTRYPAGE_ENTRY_REGMODAL_DESC_SURNAME"        
+            required="true" 
+            filter="string" 
+			hint="COM_CONFMGR_VIEW_ENTRYPAGE_ENTRY_REGMODAL_LBL_SURNAME"
+			message="Please enter your Surname"
+		
+			
+		/>
+    <field name="email" type="email"
+                
+            label="COM_CONFMGR_VIEW_ENTRYPAGE_ENTRY_REGMODAL_LBL_EMAIL"
+            description="COM_CONFMGR_VIEW_ENTRYPAGE_ENTRY_REGMODAL_DESC_EMAIL"        
+            required="true" 
+			class="validate-email input-block-level" 
+            validate="email" 
+			message="Please enter a valid email address"
+			
+		/>
+    <field name="password" type="password"
+                
+            label="COM_CONFMGR_VIEW_ENTRYPAGE_ENTRY_REGMODAL_LBL_PASS"
+            description="COM_CONFMGR_VIEW_ENTRYPAGE_ENTRY_REGMODAL_DESC_PASS"        
+            required="true" 
+			class="input-block-level"
+			message="Please enter a password"
+			
+		/>
+    <field name="password2" type="password"
+                
+            label="COM_CONFMGR_VIEW_ENTRYPAGE_ENTRY_REGMODAL_LBL_PASS2"
+            description="COM_CONFMGR_VIEW_ENTRYPAGE_ENTRY_REGMODAL_DESC_PASS2"        
+            required="true" 
+			class="input-block-level"
+            validate = "equals" field="password"
+			message="Please confirm password and it should match the password entered in the field above" 
+			
+		/>
+
+ 
+   <field name="username" type="text"
+                
+            label="COM_CONFMGR_VIEW_ENTRYPAGE_ENTRY_REGMODAL_LBL_USERNAME"
+            description="COM_CONFMGR_VIEW_ENTRYPAGE_ENTRY_REGMODAL_DESC_USERNAME"        
+            required="true" 
+			class="input-block-level"
+			message="Please enter a Username for your your account" 
+			 
+		/>
+		
+  </fieldset>
+</form>

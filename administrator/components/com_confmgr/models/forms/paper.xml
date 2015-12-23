@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset addfieldpath="/administrator/components/com_categories/models/fields" name = "Abstract Submission">    
+		<field name="student_paper" type="list" label="COM_CONFMGR_FORM_LBL_STUDENT" description="COM_CONFMGR_FORM_DESC_STUDENT" class="form-control"> 			
+		<option value="0">No</option>
+  		<option value="1">Yes</option>	
+		</field>
+		
+		<field name="id" type="hidden" default="0"/> 
+			
+		<field name="title" type="text"
+                
+            label="COM_CONFMGR_FORM_LBL_PAPER_TITLE"
+            description="COM_CONFMGR_FORM_DESC_PAPER_TITLE"        
+            required="true" 
+			class="input-block-level"
+            filter="string" 			
+			/> 
+
+       	<field name="abstract" type="textarea"
+                
+            label="COM_CONFMGR_FORM_LBL_PAPER_ABSTRACT"
+            description="COM_CONFMGR_FORM_DESC_PAPER_ABSTRACT" 
+			required="true" 
+			class="input-block-level"
+            menu_published="0"
+            cols="100"
+            rows="8"
+            filter="safehtml" 			
+			/> 
+
+       <field name="keywords" type="text"
+                
+            label="COM_CONFMGR_FORM_LBL_PAPER_KEYWORDS"
+            description="COM_CONFMGR_FORM_DESC_PAPER_KEYWORDS"  
+			required="true" 
+			class="input-block-level"
+            filter="string" /> 
+
+       <field name="created_by" type="createdby" default="" 
+            label="COM_CONFMGR_FORM_LBL_PAPER_CREATED_BY"
+            description="COM_CONFMGR_FORM_DESC_PAPER_CREATED_BY"  /> 
+			
+		<field name="theme" type="sql" 
+			label="COM_CONFMGR_FORM_LBL_PAPER_THEME" 
+			query="SELECT id, title FROM #__confmgr_theme" 
+			key_field="id" 
+			value_field="title" 
+			class="input-block-level" 
+			description = "COM_CONFMGR_FORM_DESC_PAPER_THEME"
+			required="true">
+			<option value="">COM_CONFMGR_FORM_DESC_PAPER_THEME</option>
+		</field>
+
+       <field name="checked_out" type="hidden" filter="unset" />
+        <field name="checked_out_time" type="hidden" filter="unset" />
+	</fieldset>
+</form>

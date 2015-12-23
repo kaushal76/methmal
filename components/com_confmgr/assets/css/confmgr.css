@@ -1,0 +1,50 @@
+@CHARSET "UTF-8";
+
+
+/**
+Display in-line
+*/
+.inline{
+  display: inline-block;
+}
+
+/**
+Btn container
+*/
+
+.button-container {
+    width: 520px;
+    overflow-y: auto;
+	text-align:center;
+}
+
+/**
+Entry Btn
+*/
+
+.btn-entry {
+	width: 100px;
+    height: 100px;
+    float: left;
+    margin:2px;
+}
+
+#loginmodalbtn.btn {
+	padding:0px;
+}
+
+#registermodalbtn.btn {
+	padding:0px;
+}
+
+span.centre {
+	display:block;
+	vertical-align:middle;
+	margin-top:10px;
+}
+
+.modal {
+	display:none;
+}
+
+

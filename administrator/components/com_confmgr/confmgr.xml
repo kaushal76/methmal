@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+	<name>com_confmgr</name>
+	<creationDate>2015 june 11</creationDate>
+	<author>dr kaushal keraminiyage</author>
+	<authorEmail></authorEmail>
+	<authorUrl></authorUrl>
+	<copyright>dr kaushal keraminiyage</copyright>
+	<license></license>
+	<version>0.0.5</version>
+	<description>COM_CONFMGR_XML_DESCRIPTION</description>
+	
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+	<uninstall>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+	<update>
+		<schemas>
+			<schemapath type="mysql">sql/updates</schemapath>
+		</schemas>
+	</update>
+	
+	<files folder="site">
+		<filename>controller.php</filename>
+		<filename>index.html</filename>
+		<filename>confmgr.php</filename>
+		<filename>router.php</filename>
+		<folder>controllers</folder>
+		<folder>helpers</folder>
+		<folder>models</folder>
+		<folder>views</folder>
+	</files>
+	
+	<languages folder="site">
+		<language tag="en-GB">language/en-GB.com_confmgr.ini</language>
+	</languages>
+	
+	<administration>
+		<menu link="index.php?option=com_confmgr">Confmgr</menu>
+		<submenu>
+			<menu link="option=com_confmgr&amp;view=papers">papers</menu>
+			<menu link="option=com_confmgr&amp;view=abstracts">abstracts</menu>
+			<menu link="option=com_confmgr&amp;view=full_papers">full_papers</menu>
+			<menu link="option=com_confmgr&amp;view=camera_ready_papers">camera_ready_papers</menu>
+			<menu link="option=com_confmgr&amp;view=presentations">presentations</menu>
+			<menu link="option=com_confmgr&amp;view=themes">themes</menu>
+			<menu link="option=com_confmgr&amp;view=authors">authors</menu>
+			<menu link="option=com_confmgr&amp;view=rev1ewers">rev1ewers</menu>
+			<menu link="option=com_confmgr&amp;view=rev1ews">rev1ews</menu>
+			<menu link="option=com_confmgr&amp;view=authors_for_paper">authors_for_paper</menu>
+			<menu link="option=com_confmgr&amp;view=rev1ewers_for_paper">rev1ewers_for_paper</menu>
+			<menu link="option=com_confmgr&amp;view=payments">payments</menu>
+		</submenu>
+		<files folder="admin">
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+			<filename>controller.php</filename>
+			<filename>index.html</filename>
+			<filename>confmgr.php</filename>
+			<folder>controllers</folder>
+			<folder>helpers</folder>
+			<folder>models</folder>
+			<folder>tables</folder>
+			<folder>sql</folder>
+			<folder>views</folder>
+		</files>
+		<languages folder="admin">
+			<language tag="en-GB">language/en-GB.com_confmgr.ini</language>
+			<language tag="en-GB">language/en-GB.com_confmgr.sys.ini</language>
+		</languages>
+	</administration>
+	
+	<updateservers>
+	</updateservers>
+</extension>
