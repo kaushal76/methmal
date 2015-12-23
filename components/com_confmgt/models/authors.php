@@ -130,7 +130,6 @@ class ConfmgtModelAuthors extends JModelList {
 		{
 			$this->cleanCache();
 		}
-
 		return $result;
 	}
 	
@@ -242,9 +241,7 @@ class ConfmgtModelAuthors extends JModelList {
 		$user = JFactory::getUser();
 		
 		// get the paper id		
-		$linkid = $this->getLinkid();
-		 
-			
+		$linkid = $this->getLinkid();	
 		 // Select the required fields from the table.
         $query->select(
                 $this->getState(
