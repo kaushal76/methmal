@@ -1,6 +1,6 @@
 <?php
 /**
- * @version     2.5.8.1
+ * @version     3.4.1
  * @package     com_confmgt
  * @copyright   Copyright (C) 2015. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
